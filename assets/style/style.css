@@ -1,0 +1,288 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/static/Montserrat-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Lato";
+    src: url(../fonts/Lato-Regular.ttf);
+    font-weight: 400;
+}
+header{
+    position: static;
+}
+nav{
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    padding: 15px 0;
+    color: white;
+    background-color: rgb(44, 62, 80);
+}
+#logo{
+    font-weight: 800;
+    font-size: 28px;
+}
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav button{
+    display: none;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 10px;
+    padding: 15px 20px;
+    background-color: rgb(26, 188, 156);
+    border: 3px solid rgb(26, 188, 156);
+}
+nav .container ul{
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+nav .container li{
+    cursor: pointer;
+    transition: .5s;
+}
+nav .container li:hover{
+    color: rgb(26, 188, 156);
+}
+#hero{
+    padding: 170px 0;
+    background-color: rgb(26, 188, 156);
+}
+#hero h1{
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 64px;
+}
+#hero .star:after,#hero .star:before{
+    background-color: white;
+}
+#hero .container{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+#hero img{
+    width: 240px;
+}
+#hero ul{
+    white-space: nowrap;
+    font-family: "Lato";
+    font-size: 24px;
+    display: flex;
+}
+#portfolio .container{
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+#portfolio .container h2,#about .container h2,#contact .container h2{
+    font-family: "Montserrat";
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.all-cards{
+    justify-content: space-between;
+}
+.card{
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.card .plus{
+    transition: .5s;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 80px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(26, 188, 156)
+}
+.card:hover .plus{
+    visibility: visible;
+    opacity: 1;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+}
+.star{
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.star:after,.star:before{
+    content: "";
+    display: inline-block;
+    background-color: black;
+    height: 4px;
+    width: 120px;
+    border-radius: 3px;
+}
+#about{
+    background-color: rgb(26, 188, 156);
+}
+#about .container{
+    padding: 100px 0 50px;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+#about .container .text{
+    font-family: "Lato";
+    line-height: 32px;
+}
+#about .container button{
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 16px 28px;
+    color: white;
+    transition: .5s;
+}
+#about .container button:hover{
+    background-color: white;
+    color: black;
+}
+#about .star:after,#about .star:before{
+    background-color: white;
+}
+#contact .container{
+    padding: 100px 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+#contact .container form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#contact .container input{
+    font-family: "Lato";
+    font-size: 24px;
+    padding: 24px 48px 24px 0;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+#contact .container textarea{
+    resize: vertical;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-size: 24px;
+    font-family: "Lato";
+}
+#contact .container .send-btn{
+    display: flex;
+}
+#contact .container .send-btn button{
+    align-self: flex-start;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 24px;
+    background-color: rgb(26, 188, 156);
+    padding:18px 28px;
+}
+#info{
+    background-color: rgb(44, 62, 80);
+}
+#info .container{
+    padding: 80px 0;
+    color: white;
+}
+#info .container .row>*{
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#info .container h3{
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 24px;
+    text-transform: uppercase;
+}
+#info .container ul{
+    display: flex;
+    gap: 10px;
+}
+#info .container li{
+    transition: .5s;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    align-items: center;
+    justify-content: center;
+}
+#info .container li:hover{
+    color: black;
+    background-color: white;
+}
+#info .container p{
+    font-family: "Lato";
+    font-size: 20px;
+    text-align: center;
+}
+#info .container a{
+    color: rgb(26, 188, 156);
+}
+#info .container a:hover{
+    color: rgb(26, 188, 156);
+}
+#copyright{
+    background-color: rgb(26, 37, 47);
+}
+#copyright .container{
+    font-family: "Lato";
+    padding: 24px 0;
+    color: white;
+    text-align: center;
+}
+
+@media only screen and (max-width:1440px){
+    .lg-none{
+        display: none !important;
+    }
+}
+@media only screen and (max-width:992px){
+    nav button{
+        display: inline-block;
+    }
+    .links{
+        display: none !important;
+    }
+}
+@media only screen and (max-width:768px){
+    .sm-none{
+        display: none !important;
+    }
+}
